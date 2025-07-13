@@ -28,14 +28,19 @@ header {
   background-color: white;
 }
 
+.header {
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
 .sidebar {
   grid-area: 1/1/3/2;
-  background-color: blueviolet;
+  background-color: #00a7e1;
 }
 
 main {
   grid-area: 2/2/3/3;
-  background-color: bisque;
+  background-color: #ecf2f5;
 }
 
 /* STYLING THE HEADER SECTION */
@@ -67,7 +72,7 @@ btn {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: red;
+  background-color: #00a9e1ce;
   margin-top: 1rem;
 }
 
@@ -88,7 +93,7 @@ input {
 
 input:focus {
   border: none;
-  outline: 1px solid rgb(195, 195, 224);
+  outline: 1px solid #00a7e1;
 }
 
 .bell-btn {
@@ -114,7 +119,7 @@ input:focus {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  background-color: red;
+  background-color: #00a9e1ce;
   margin-left: 5rem;
 }
 
@@ -129,4 +134,150 @@ input:focus {
 
 .name {
   font-size: 1.8rem;
+}
+
+.new,
+.upload,
+.share {
+  width: 6rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  border-radius: 3rem;
+  background-color: #00a7e1;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.new {
+  margin-left: 14rem;
+}
+
+/* STYLING THE SIDEBAR */
+
+.sidebar-content {
+  display: grid;
+}
+
+.sidebar-content > button {
+  border: none;
+  background: none;
+  height: 3rem;
+  color: white;
+}
+
+.dashboard {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.dashboard-text {
+  font-weight: bold;
+  font-size: 2rem;
+  position: relative;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.home {
+  margin-top: 3rem;
+}
+
+svg {
+  width: 2rem;
+  fill: white;
+}
+.dashboard-svg {
+  width: 3.5rem;
+}
+
+.sidebar-content button:not(:first-child) {
+  padding-right: 8rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+button span {
+  padding-left: 1rem;
+  position: relative;
+  bottom: 0.5rem;
+}
+
+.home-text {
+  position: relative;
+  left: 3px;
+}
+.profile {
+  padding-left: 1rem;
+}
+
+.history {
+  position: relative;
+  left: 8px;
+}
+
+.history-text {
+  position: relative;
+  left: 2px;
+}
+
+.tasks {
+  position: relative;
+  left: 4px;
+}
+
+.communities {
+  position: relative;
+  left: 2.4rem;
+}
+
+.settings {
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+}
+
+.settings-text,
+.support-text,
+.privacy-text {
+  position: relative;
+  left: 5px;
+}
+
+.messages {
+  position: relative;
+  left: 1.5rem;
+}
+
+.support,
+.privacy {
+  margin-left: 1.5rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+  background-color: rgb(199, 147, 147);
+  grid-area: 1/1/3/2;
+}
+
+.announcements {
+  background-color: rgb(138, 138, 206);
+}
+
+.trending {
+  background-color: rgb(231, 231, 186);
+}
+
+.projects > div:nth-child(odd) {
+  background-color: #010c0f;
+}
+
+.projects > div:nth-child(even) {
+  background-color: #00a7e1;
 }
