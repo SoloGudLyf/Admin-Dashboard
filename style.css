@@ -10,15 +10,15 @@
 /* STYLING THE OVERALL APPEARANCE OF THE PAGE */
 
 body {
+  height: 100vh;
+  overflow: hidden;
   background-color: #000;
 }
 
 .body {
   margin: 0 auto;
   max-width: 80vw;
-  height: 100vh;
   display: grid;
-  background-color: aqua;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
 }
@@ -41,6 +41,11 @@ header {
 main {
   grid-area: 2/2/3/3;
   background-color: #ecf2f5;
+}
+
+button:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /* STYLING THE HEADER SECTION */
@@ -255,29 +260,174 @@ button span {
   margin-left: 1.5rem;
 }
 
+/* STYLING THE MAIN AREA */
+
 main {
   display: grid;
+  height: 79vh;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 .projects {
-  background-color: rgb(199, 147, 147);
   grid-area: 1/1/3/2;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
+.project-1-area {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.project-1 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50fr;
+  grid-template-rows: 3fr 1fr;
+  padding: 1rem;
+}
+
+.badge {
+  background-color: rgb(240, 182, 76);
+  grid-area: 1/1/3/2;
+  border-radius: 9px 0 0 9px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content-1 {
+  grid-area: 1/2/2/3;
+  background-color: white;
+  line-height: 1.2rem;
+  border-radius: 0 9px 0 0;
+  padding-left: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icons {
+  background-color: white;
+  border-radius: 0 0 9px 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.projects svg {
+  fill: black;
+  width: 2rem;
+  height: 2rem;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.project-brief {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+.projects-heading,
+.announcement-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.project-1-area:nth-child(2) {
+  position: relative;
+  top: 1.7rem;
+}
+
+/* STYLING THE ANNOUNCEMENTS SECTION  */
+
 .announcements {
-  background-color: rgb(138, 138, 206);
+  display: grid;
+  grid-template-rows: 0.9fr 5fr;
+}
+
+.announcement-title {
+  padding-top: 1rem;
+}
+
+.announcement-content {
+  background-color: white;
+  display: grid;
+  padding: 1rem;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 9px;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 1rem;
+}
+
+.announcement-sub-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.content {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+hr {
+  position: relative;
+  top: 0.5rem;
 }
 
 .trending {
-  background-color: rgb(231, 231, 186);
+  height: 10vh;
+  margin-right: 5px;
 }
 
-.projects > div:nth-child(odd) {
-  background-color: #010c0f;
+h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
-.projects > div:nth-child(even) {
-  background-color: #00a7e1;
+.trend-items {
+  background-color: white;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.trend-info {
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  display: flex;
+  margin-top: 1.1rem;
+}
+
+.trend-items img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.topic {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+h6 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.9rem;
 }
